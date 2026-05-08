@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Commande - Catégories</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+
+```
+<div>
+  <h1>Gestion des catégories</h1>
+  <p class="subtitle">Consultation et ajout</p>
+</div>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="clients.html">Clients</a>
+  <a href="produits.html">Produits</a>
+  <a href="categories.html" class="active">Catégories</a>
+  <a href="promotions.html">Promotions</a>
+</nav>
+```
+
+  </header>
+
+  <main class="container">
+
+```
+<section class="card">
+
+  <h2>Ajouter une catégorie</h2>
+
+  <form id="categorie-form" class="form-grid">
+
+    <input type="text" id="nom" placeholder="Nom de la catégorie" required />
+
+    <button type="submit">Ajouter</button>
+
+  </form>
+
+  <p id="categorie-message" class="message"></p>
+
+</section>
+
+<section class="card">
+
+  <div class="toolbar">
+
+    <h2>Liste des catégories</h2>
+
+    <button id="reload-categories">Actualiser</button>
+
+  </div>
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+        </tr>
+      </thead>
+
+      <tbody id="categories-body">
+        <tr><td colspan="2">Chargement...</td></tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <script src="js/api.js"></script>
+
+  <script src="js/shared.js"></script>
+
+  <script src="js/categories.js"></script>
+
+</body>
+</html>
