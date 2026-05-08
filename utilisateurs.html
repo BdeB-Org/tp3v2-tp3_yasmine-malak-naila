@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Commande - Utilisateurs</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Gestion des utilisateurs</h1>
+      <p class="subtitle">Consultation et ajout</p>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="clients.html">Clients</a>
+      <a href="produits.html">Produits</a>
+      <a href="utilisateurs.html" class="active">Utilisateurs</a>
+      <a href="paniers.html">Paniers</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Ajouter un utilisateur</h2>
+      <form id="utilisateur-form" class="form-grid">
+        <input type="text" id="nom" placeholder="Nom" required />
+        <input type="text" id="prenom" placeholder="Prénom" required />
+        <input type="text" id="adresse_user" placeholder="Adresse" />
+        <input type="text" id="ville" placeholder="Ville" />
+        <input type="email" id="courriel" placeholder="Courriel" required />
+        <input type="password" id="mdp" placeholder="Mot de passe" required />
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="utilisateur-message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Liste des utilisateurs</h2>
+        <button id="reload-utilisateurs">Actualiser</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Courriel</th>
+              <th>Ville</th>
+            </tr>
+          </thead>
+          <tbody id="utilisateurs-body">
+            <tr><td colspan="5">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/utilisateurs.js"></script>
+</body>
+</html>
