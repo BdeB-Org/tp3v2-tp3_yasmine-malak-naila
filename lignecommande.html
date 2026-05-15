@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Commande - Lignes de commande</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div>
+    <h1>Gestion des lignes de commande</h1>
+    <p class="subtitle">Consultation, ajout et suppression</p>
+  </div>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="clients.html">Clients</a>
+    <a href="produits.html">Produits</a>
+    <a href="categories.html">Catégories</a>
+    <a href="promotions.html">Promotions</a>
+    <a href="commandes.html">Commandes</a>
+    <a href="lignecommande.html" class="active">Lignes commande</a>
+  </nav>
+
+</header>
+
+<main class="container">
+
+  <section class="card">
+
+    <h2>Ajouter une ligne de commande</h2>
+
+    <form id="ligne-form" class="form-grid">
+
+      <input
+        type="number"
+        id="quantite"
+        placeholder="Quantité"
+        required
+      />
+
+      <input
+        type="number"
+        id="id_commande"
+        placeholder="ID commande"
+        required
+      />
+
+      <input
+        type="number"
+        id="id_produit"
+        placeholder="ID produit"
+        required
+      />
+
+      <button type="submit">Ajouter</button>
+
+    </form>
+
+    <p id="ligne-message" class="message"></p>
+
+  </section>
+
+  <section class="card">
+
+    <div class="toolbar">
+
+      <h2>Liste des lignes de commande</h2>
+
+      <button id="reload-lignes">
+        Actualiser
+      </button>
+
+    </div>
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>ID ligne</th>
+            <th>Quantité</th>
+            <th>ID commande</th>
+            <th>ID produit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="lignes-body">
+          <tr>
+            <td colspan="5">Chargement...</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/lignecommande.js"></script>
+
+</body>
+</html>
