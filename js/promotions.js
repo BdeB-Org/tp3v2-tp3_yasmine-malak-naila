@@ -1,5 +1,8 @@
 const promotionsBody = document.getElementById('promotions-body');
+<<<<<<< HEAD
 const promotionForm = document.getElementById('promotion-form');
+=======
+>>>>>>> sauvegarde-commits
 const reloadPromotionsBtn = document.getElementById('reload-promotions');
 
 async function chargerPromotions() {
@@ -27,6 +30,7 @@ async function chargerPromotions() {
 
     promotionsBody.innerHTML =
       `<tr><td colspan="5">${escapeHtml(error.message)}</td></tr>`;
+<<<<<<< HEAD
 
     setMessage(
       'promotion-message',
@@ -71,6 +75,11 @@ promotionForm.addEventListener('submit', async (event) => {
   }
 });
 
+=======
+  }
+}
+
+>>>>>>> sauvegarde-commits
 reloadPromotionsBtn.addEventListener('click', chargerPromotions);
 
 chargerPromotions();
